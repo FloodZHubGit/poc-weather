@@ -1,38 +1,97 @@
-.App {
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.weather-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.weather-title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.weather-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.weather-details {
+  width: 100%;
+  text-align: left;
+}
+
+.weather-temp {
+  font-size: 2em;
+  margin: 10px 0;
+  color: #ff5722;
+}
+
+.weather-description,
+.weather-humidity,
+.weather-pressure,
+.weather-wind,
+.weather-source {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.weather-loading,
+.weather-error {
+  font-size: 1.5em;
+  color: #ff5722;
+}
+
+@media (max-width: 600px) {
+  .weather-container {
+      padding: 15px;
+  }
+
+  .weather-title {
+      font-size: 1.2em;
+  }
+
+  .weather-temp {
+      font-size: 1.5em;
+  }
+
+  .weather-details p {
+      font-size: 0.9em;
+  }
+}
+
+.new-location-button {
+  background-color: #ff5722;
   color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.new-location-button:hover {
+  background-color: #f44336;
 }
