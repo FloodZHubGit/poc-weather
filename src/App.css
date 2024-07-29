@@ -1,11 +1,13 @@
 body {
   margin: 0;
+  padding: 10px;
   font-family: 'Montserrat', sans-serif;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  box-sizing: border-box;
 }
 
 .weather-container {
@@ -16,6 +18,7 @@ body {
   max-width: 400px;
   width: 100%;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .weather-title {
@@ -63,24 +66,6 @@ body {
   color: #ff5722;
 }
 
-@media (max-width: 600px) {
-  .weather-container {
-      padding: 15px;
-  }
-
-  .weather-title {
-      font-size: 1.2em;
-  }
-
-  .weather-temp {
-      font-size: 1.5em;
-  }
-
-  .weather-details p {
-      font-size: 0.9em;
-  }
-}
-
 .new-location-button {
   background-color: #ff5722;
   color: white;
@@ -94,4 +79,100 @@ body {
 
 .new-location-button:hover {
   background-color: #f44336;
+}
+
+@media (max-width: 600px) {
+  .weather-container {
+    padding: 15px;
+  }
+
+  .weather-title {
+    font-size: 1.2em;
+  }
+
+  .weather-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .weather-temp {
+    font-size: 1.5em;
+  }
+
+  .weather-details {
+    text-align: center;
+  }
+
+  .weather-details p {
+    font-size: 0.9em;
+  }
+
+  .new-location-button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 400px) {
+  .weather-container {
+    padding: 10px;
+  }
+
+  .weather-title {
+    font-size: 1em;
+  }
+
+  .weather-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .weather-temp {
+    font-size: 1.2em;
+  }
+
+  .weather-details {
+    text-align: center;
+  }
+
+  .weather-details p {
+    font-size: 0.8em;
+  }
+
+  .new-location-button {
+    padding: 6px 12px;
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 320px) {
+  .weather-container {
+    padding: 5px;
+  }
+
+  .weather-title {
+    font-size: 0.9em;
+  }
+
+  .weather-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .weather-temp {
+    font-size: 1em;
+  }
+
+  .weather-details {
+    text-align: center;
+  }
+
+  .weather-details p {
+    font-size: 0.7em;
+  }
+
+  .new-location-button {
+    padding: 4px 8px;
+    font-size: 0.7em;
+  }
 }
